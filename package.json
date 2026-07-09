@@ -1,0 +1,43 @@
+{
+  "name": "exvogen",
+  "version": "1.0.0",
+  "description": "⚡ ExvoGen - Fast Minecraft name generator with proxy support and real availability check via Mojang API",
+  "type": "module",
+  "main": "exvogen.js",
+  "bin": {
+    "exvogen": "./exvogen.js"
+  },
+  "scripts": {
+    "start": "node exvogen.js",
+    "test": "node exvogen.js"
+  },
+  "keywords": [
+    "minecraft",
+    "name-generator",
+    "exvo",
+    "exvogen",
+    "minecraft-names",
+    "mojang-api",
+    "proxy",
+    "name-checker",
+    "namemc"
+  ],
+  "author": "Exvo",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/ExvoGen"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/ExvoGen/issues"
+  },
+  "homepage": "https://github.com/yourusername/ExvoGen#readme",
+  "dependencies": {
+    "node-fetch": "^3.3.2",
+    "https-proxy-agent": "^7.0.2",
+    "socks-proxy-agent": "^8.0.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
