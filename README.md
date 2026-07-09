@@ -1,31 +1,30 @@
-# ⚡ ExvoGen
+⚡ ExvoGen
+Fast Minecraft name generator with proxy support and real availability check via Mojang API
 
-**Fast Minecraft name generator with proxy support and real availability check via Mojang API**
+https://img.shields.io/badge/version-1.0.0-purple
+https://img.shields.io/badge/node-%253E%253D18.0.0-green
+https://img.shields.io/badge/license-MIT-purple
 
-![Version](https://img.shields.io/badge/version-1.0.0-purple)
-![Node](https://img.shields.io/badge/node-%3E%3D18.0.0-green)
-![License](https://img.shields.io/badge/license-MIT-purple)
+✨ Features
+⚡ Fast - Parallel checking with proxy rotation
 
-## ✨ Features
+🔍 Real verification - Checks availability via Mojang API
 
-- ⚡ **Fast** - Parallel checking with proxy rotation
-- 🔍 **Real verification** - Checks availability via Mojang API
-- 🔀 **Proxy support** - Auto-load and test proxies from `proxies.txt`
-- 🎨 **Beautiful UI** - Purple ASCII art with colored output
-- 📊 **Customizable** - Set name length and count
-- 🎯 **Interactive** - Select and claim available names
+🔀 Proxy support - Auto-load and test proxies from proxies.txt
 
-## 📦 Installation
+🎨 Beautiful UI - Purple ASCII art with colored output
 
-```bash
-# Clone the repository
+📊 Customizable - Set name length and count
+
+🎯 Interactive - Select and claim available names
+
+📦 Installation
 git clone https://github.com/zFixy/ExvoGen.git
 cd ExvoGen
-
-# Install dependencies
 npm install
-## 🚀 Usage
+🚀 Usage
 Basic usage
+
 node exvogen.js
 With proxies
 Create proxies.txt in the project folder
@@ -51,14 +50,13 @@ Maximum length (3-16)
 You can adjust settings in the CONFIG object inside exvogen.js:
 
 const CONFIG = {
-    TIMEOUT: 3000,        // API timeout (ms)
-    PARALLEL: 5,          // Parallel checks
-    MAX_ATTEMPTS: 1000,   // Max generation attempts
-    RETRY_DELAY: 500,     // Retry delay (ms)
-    MAX_RETRIES: 1,       // Number of retries
-    PROXY_TEST_TIMEOUT: 2000 // Proxy test timeout
+    TIMEOUT: 3000,
+    PARALLEL: 5,
+    MAX_ATTEMPTS: 1000,
+    RETRY_DELAY: 500,
+    MAX_RETRIES: 1,
+    PROXY_TEST_TIMEOUT: 2000
 };
-
 🛠️ How it works
 Loads proxies from proxies.txt (if exists)
 
@@ -68,13 +66,7 @@ Generates random names based on your settings
 
 Checks availability via Mojang API
 
-Shows results with color coding:
-
-🟢 FREE - Available to claim
-
-🔴 TAKEN - Already taken
-
-🟡 UNKNOWN - Could not verify
+Shows results with color coding
 
 Interactive selection - Choose and get instructions to claim
 
@@ -97,7 +89,6 @@ Minimum length (3-16): 5
 Maximum length (5-16): 8
 
 ⚡ Settings: 10 names | 5-8 chars
-📝 Minecraft limits: 3-16 chars
 
 📊 Generating 10 names...
 
@@ -131,11 +122,9 @@ How to change your Minecraft name:
 
 ⚠️  You can change your name once every 30 days!
 
-══════════════════════════════════════════════
-
 ⚡ Thanks for using ExvoGen! ⚡
 🔑 Getting Proxies
-Free proxies
+Free proxy sources
 Free Proxy List
 
 ProxyScrape
@@ -143,17 +132,17 @@ ProxyScrape
 Open Proxy List
 
 Format
-text
+
 IP:PORT
 # Example:
 138.2.64.185:8118
 172.237.73.24:80
 ⚠️ Important Notes
-Rate Limiting: Mojang API has rate limits. Using proxies helps distribute requests.
+Mojang API has rate limits. Using proxies helps distribute requests.
 
-Name Change: You can change your Minecraft name once every 30 days.
+You can change your Minecraft name once every 30 days.
 
-Proxy Quality: Free proxies may be slow or unreliable. Consider paid proxies for better performance.
+Free proxies may be slow or unreliable. Consider paid proxies for better performance.
 
 🛡️ Legal
 This tool only checks name availability via public APIs. It does not:
@@ -162,15 +151,13 @@ Hack or exploit Minecraft
 
 Steal accounts
 
-Violate Mojang's terms of service (when used responsibly)
+Violate Mojang's terms of service
 
 🤝 Contributing
-Contributions are welcome! Please feel free to submit a Pull Request.
+Contributions are welcome! Feel free to submit a Pull Request.
 
 📄 License
 MIT License - see LICENSE file for details.
 
-⭐ Star History
-If you find this useful, please give it a star on GitHub!
-
 Made with ❤️ by Exvo
+
