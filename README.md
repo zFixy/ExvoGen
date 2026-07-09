@@ -24,7 +24,7 @@ cd ExvoGen
 
 # Install dependencies
 npm install
-🚀 Usage
+## 🚀 Usage
 Basic usage
 node exvogen.js
 With proxies
