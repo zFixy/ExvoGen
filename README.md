@@ -1,54 +1,77 @@
-⚡ ExvoGen
-Fast Minecraft name generator with proxy support and real availability check via Mojang API
+# ⚡ ExvoGen
 
-https://img.shields.io/badge/version-1.0.0-purple
-https://img.shields.io/badge/node-%253E%253D18.0.0-green
-https://img.shields.io/badge/license-MIT-purple
+Fast Minecraft name generator with proxy support and real-time availability checks via the Mojang API.
 
-✨ Features
-⚡ Fast - Parallel checking with proxy rotation
+![Version](https://img.shields.io/badge/version-1.0.0-purple)
+![Node.js](https://img.shields.io/badge/node-%3E%3D18.0.0-green)
+![License](https://img.shields.io/badge/license-MIT-purple)
 
-🔍 Real verification - Checks availability via Mojang API
+---
 
-🔀 Proxy support - Auto-load and test proxies from proxies.txt
+## ✨ Features
 
-🎨 Beautiful UI - Purple ASCII art with colored output
+- ⚡ **Fast** – Parallel name checking with proxy rotation.
+- 🔍 **Real-time availability checks** – Verifies Minecraft usernames using the Mojang API.
+- 🔀 **Proxy Support** – Automatically loads and tests proxies from `proxies.txt`.
+- 🎨 **Clean UI** – Purple ASCII banner with colored console output.
+- 📊 **Customizable** – Configure the number and length of generated names.
+- 🎯 **Interactive** – Instantly select an available username.
 
-📊 Customizable - Set name length and count
+---
 
-🎯 Interactive - Select and claim available names
+## 📦 Installation
 
-📦 Installation
+```bash
 git clone https://github.com/zFixy/ExvoGen.git
 cd ExvoGen
 npm install
-🚀 Usage
-Basic usage
+```
 
+---
+
+## 🚀 Usage
+
+Run the generator:
+
+```bash
 node exvogen.js
-With proxies
-Create proxies.txt in the project folder
+```
+
+### Using Proxies
+
+Create a file named `proxies.txt` in the project directory.
 
 Add one proxy per line:
 
+```text
 138.2.64.185:8118
 172.237.73.24:80
 8.215.25.3:2080
-Run the generator:
+```
 
+Then start the generator:
+
+```bash
 node exvogen.js
-Options
-The program will ask you:
+```
 
-How many names to generate? (1-1000)
+---
 
-Minimum length (3-16)
+## ⚙️ Options
 
-Maximum length (3-16)
+The program will ask you for:
 
-🔧 Configuration
-You can adjust settings in the CONFIG object inside exvogen.js:
+- **How many names to generate** (1–1000)
+- **Minimum length** (3–16)
+- **Maximum length** (3–16)
 
+---
+
+## 🔧 Configuration
+
+You can customize the settings inside `exvogen.js`:
+
+```js
 const CONFIG = {
     TIMEOUT: 3000,
     PARALLEL: 5,
@@ -57,107 +80,112 @@ const CONFIG = {
     MAX_RETRIES: 1,
     PROXY_TEST_TIMEOUT: 2000
 };
-🛠️ How it works
-Loads proxies from proxies.txt (if exists)
+```
 
-Tests proxies - removes dead ones
+---
 
-Generates random names based on your settings
+## 🛠️ How It Works
 
-Checks availability via Mojang API
+1. Loads proxies from `proxies.txt` (if available).
+2. Tests all proxies and removes dead ones.
+3. Generates random Minecraft usernames.
+4. Checks availability through the Mojang API.
+5. Displays the results with color-coded output.
+6. Lets you choose an available username.
 
-Shows results with color coding
+---
 
-Interactive selection - Choose and get instructions to claim
+## 📋 Example Output
 
-📋 Example Output
-
-   ███████╗██╗  ██╗██╗   ██╗ ██████╗ 
+```text
+   ███████╗██╗  ██╗██╗   ██╗ ██████╗
    ██╔════╝╚██╗██╔╝██║   ██║██╔═══██╗
    █████╗   ╚███╔╝ ██║   ██║██║   ██║
    ██╔══╝   ██╔██╗ ╚██╗ ██╔╝██║   ██║
    ███████╗██╔╝ ██╗ ╚████╔╝ ╚██████╔╝
-   ╚══════╝╚═╝  ╚═╝  ╚═══╝   ╚═════╝ 
-
-╔═══════════════════════════════════════════╗
-║   ⚡ EXVOGEN - MINECRAFT NAME GENERATOR ⚡   ║
-║   Fast · Proxy Support · Real Checks        ║
-╚═══════════════════════════════════════════╝
+   ╚══════╝╚═╝  ╚═╝  ╚═══╝   ╚═════╝
 
 How many names to generate? 10
-Minimum length (3-16): 5
-Maximum length (5-16): 8
+Minimum length: 5
+Maximum length: 8
 
-⚡ Settings: 10 names | 5-8 chars
+Generating...
 
-📊 Generating 10 names...
+[1] Crafty   ✅ AVAILABLE
+[2] Pixel_   ✅ AVAILABLE
+[3] Notch    ❌ TAKEN
+[4] Steve_   ❌ TAKEN
 
-  [1] Crafty ... ✅ FREE
-  [2] Pixel_ ... ✅ FREE
-  [3] Notch ... ❌ TAKEN
-  [4] Steve_ ... ❌ TAKEN
+Available names:
+1. Crafty
+2. Pixel_
+```
 
-══════════════════════════════════════════════
-📊 RESULTS
-══════════════════════════════════════════════
-✅ FREE:     3
-❌ TAKEN:    6
-❓ UNKNOWN:  1
+---
 
-🎯 AVAILABLE NAMES:
-   1. Crafty
-   2. Pixel_
-   3. NovaX
+## 🌐 Getting Proxies
 
-Change to one of these? (y/n): y
-Select number (1-3): 2
+Some free proxy providers:
 
-✅ "Pixel_" is AVAILABLE!
+- https://proxyscrape.com/free-proxy-list
+- https://openproxylist.xyz
+- https://free-proxy-list.net
 
-How to change your Minecraft name:
-  1. Go to https://www.minecraft.net
-  2. Login to your account
-  3. Go to Profile → Name Change
-  4. Enter "Pixel_" and confirm
+Proxy format:
 
-⚠️  You can change your name once every 30 days!
-
-⚡ Thanks for using ExvoGen! ⚡
-🔑 Getting Proxies
-Free proxy sources
-Free Proxy List
-
-ProxyScrape
-
-Open Proxy List
-
-Format
-
+```text
 IP:PORT
-# Example:
+```
+
+Example:
+
+```text
 138.2.64.185:8118
 172.237.73.24:80
-⚠️ Important Notes
-Mojang API has rate limits. Using proxies helps distribute requests.
+```
 
-You can change your Minecraft name once every 30 days.
+---
 
-Free proxies may be slow or unreliable. Consider paid proxies for better performance.
+## ⚠️ Notes
 
-🛡️ Legal
-This tool only checks name availability via public APIs. It does not:
+- Mojang API has rate limits. Using proxies helps distribute requests.
+- Minecraft usernames can only be changed once every **30 days**.
+- Free proxies may be slow or unreliable.
+- For better performance, consider using premium proxies.
 
-Hack or exploit Minecraft
+---
 
-Steal accounts
+## 🛡️ Legal
 
-Violate Mojang's terms of service
+This tool only checks Minecraft username availability using the official public Mojang API.
 
-🤝 Contributing
-Contributions are welcome! Feel free to submit a Pull Request.
+It **does not**:
 
-📄 License
-MIT License - see LICENSE file for details.
+- Hack Minecraft accounts
+- Bypass Mojang security
+- Steal accounts
+- Violate Mojang's Terms of Service
 
-Made with ❤️ by Exvo
+---
 
+## 🤝 Contributing
+
+Pull requests and suggestions are welcome!
+
+If you find a bug or have an idea for an improvement, feel free to open an issue.
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License**.
+
+See the `LICENSE` file for more information.
+
+---
+
+<div align="center">
+
+Made with ❤️ by **Exvo**
+
+</div>
