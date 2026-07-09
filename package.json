@@ -26,12 +26,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/ExvoGen"
+    "url": "https://github.com/zFixy/ExvoGen"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/ExvoGen/issues"
+    "url": "https://github.com/zFixy/ExvoGen/issues"
   },
-  "homepage": "https://github.com/yourusername/ExvoGen#readme",
+  "homepage": "https://github.com/zFixy/ExvoGen#readme",
   "dependencies": {
     "node-fetch": "^3.3.2",
     "https-proxy-agent": "^7.0.2",
